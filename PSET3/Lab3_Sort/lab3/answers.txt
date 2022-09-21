@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: Bubble sort works best in sorted lists
+
+sort2 uses: Merge Sort
+
+How do you know?: Merge sort is very fast and consumes the least time
+
+sort3 uses: Selection sort
+
+How do you know?: In Selection sort, the order type of the list is not very important, almost the same result is obtained in sorting unordered and ordered and reversed lists. And it is generally much slower than merge sort on large numbers.
