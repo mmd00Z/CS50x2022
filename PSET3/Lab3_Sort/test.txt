@@ -1,3 +1,4 @@
+Time test of sort code to figure it out algorithm of them:
 Sample / Sort   sort1   sort2   sort3
 =======================================
 random5000      0.084s  0.095s  0.057s

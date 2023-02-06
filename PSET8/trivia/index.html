@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3>How are you?</h3>
+            <button class="correct">very good</button>
+            <button class="incorrect">good</button>
+            <button class="incorrect">not bad</button>
+            <button class="incorrect">bad</button>
+            <p id="check-result1"></p>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What planet do we live on?</h3>
+            <input id="answer" type="text">
+            <button id="check-answer">Check Answer</button>
+            <p id="check-result2"></p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    let correct = document.querySelector('.correct');
+    let incorrects = document.querySelectorAll('.incorrect');
+    let btn_check = document.querySelector('#check-answer');
+    let txt_field = document.querySelector('#answer');
+    let check_result1 = document.querySelector('#check-result1');
+    let check_result2 = document.querySelector('#check-result2');
+
+
+    correct.addEventListener('click', function () {
+        correct.style.backgroundColor = 'green';
+        check_result1.style.color = 'green';
+        check_result1.textContent = "Correct!";
+    });
+
+    for(let i = 0; i<incorrects.length; i++) {
+        incorrects[i].addEventListener('click', function () {
+            incorrects[i].style.backgroundColor = 'red';
+            check_result1.style.color = 'red';
+            check_result1.textContent = "Incorrect";
+        });
+    }
+
+    btn_check.addEventListener('click', function () {
+        if (txt_field.value == "Earth") {
+            txt_field.style.color = 'green';
+            check_result2.style.color = 'green';
+            check_result2.textContent = "Correct!";
+        }
+        else {
+            txt_field.style.color = 'red';
+            check_result2.style.color = 'red';
+            check_result2.textContent = "Incorrect";
+        }
+    });
+</script>
