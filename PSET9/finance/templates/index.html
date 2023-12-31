@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    C$50 Finance: Portfolio
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <th>{{ row["symbol"] }}</th>
+                    <th>{{ row["shares"] }}</th>
+                    <th>{{ row["name"] }}</th>
+                    <th>{{ row["price"] }}</th>
+                    <th>{{ row["total"] }}</th>
+                </tr>
+            {% endfor %}
+
+            <tr>
+                <th></th><th></th><th></th>
+                <th>Cash</th>
+                <th>{{ cash }}</th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th>
+                <th>TOTAL</th>
+                <th>{{ total }}</th>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
